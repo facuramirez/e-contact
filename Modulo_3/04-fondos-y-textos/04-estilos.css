@@ -1,0 +1,69 @@
+* {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+body {
+  background-image: url("../imagenes/paisaje.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#titulo {
+  text-align: center;
+  background-color: #ccc;
+  text-shadow: 2px 2px 3px white;
+}
+
+#subTitulo {
+  text-decoration: underline;
+  color: white;
+  background-color: cornflowerblue;
+  box-shadow: 0px 0px 5px white;
+  width: fit-content;
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.contenedor {
+  margin: 0 auto;
+  border: 2px solid gray;
+  padding: 15px;
+  box-shadow: 0px 0px 5px black;
+  background-color: bisque;
+  border-radius: 10px;
+  width: 35%;
+  min-width: 300px;
+  min-height: 200px;
+  margin-top: 15px;
+}
+
+.contenedor .lista li {
+  margin-top: 8px;
+}
+
+/* Modifico EL PRIMER "LI" de la "UL" */
+.contenedor #colores li:first-child {
+  color: green;
+}
+
+/* Modifico el SEGUNDO "LI" de la "UL" */
+.contenedor #colores li:nth-child(2) {
+  font-size: 25px;
+}
+
+/* Modifico el SEXTO "LI" de la "UL" */
+.contenedor #colores li:nth-child(6) {
+  text-decoration: underline;
+}
+
+/* Modifico EL ULTIMO "LI" de la "UL" */
+.contenedor #colores li:last-child {
+  letter-spacing: 3px;
+}
+

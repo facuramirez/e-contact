@@ -1,0 +1,159 @@
+* {
+  font-family: sans-serif, Arial, Helvetica;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../imagenes/paisaje.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#titulo {
+  text-align: center;
+  background-color: #ccc;
+  text-shadow: 2px 2px 3px white;
+  width: 50%;
+  margin: 0 auto;
+  transition: all 500ms;
+}
+
+/* PSEUDOCLASE :hover aplicada al título principal*/
+#titulo:hover {
+  width: 100%;
+  background-color: gray;
+  letter-spacing: 1px;
+}
+
+/* Aplico muchas reglas a 2 ID's de una vez (nótese que se separa por comas) */
+#subTitulo,
+#texto {
+  text-decoration: underline;
+  color: white;
+  background-color: cornflowerblue;
+  box-shadow: 0px 0px 5px white;
+  width: fit-content;
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+#subTitulo {
+  transition: all 300ms;
+}
+
+#subTitulo:hover {
+  color: #ccc;
+  box-shadow: 0px 0px 15px black;
+}
+
+/* Acá estoy pisando algunas propiedades establecidas anteriormente */
+#texto {
+  font-size: 20px;
+  background-color: lightblue;
+  text-decoration: none;
+  color: black;
+}
+
+#cajas {
+  /* Coloco este position:relative para combinarlo con el ejemplo de CAJA4*/
+  position: relative;
+  margin-top: 30px;
+  border: 3px solid black;
+}
+
+#cajas .caja {
+  /* Con display: inline-block puedo tener las caracteristicas del display: inline, es decir que se coloquen una al lado de otra,
+  PERO en este caso podre manipular el ancho, alto, margin y paddings, cosa que no se podia hacer con un display: inline */
+  display: inline-block;
+
+  width: 250px;
+  height: 250px;
+  background-color: darkcyan;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* NOTESE QUE ES LA CLASE "CAJA" SIN S */
+.caja {
+  transition: transform 400ms;
+}
+
+.caja:hover {
+  /* Dentro de transform, una de los valores que se puede indicarle es "scale(1.1)" por ejemplo
+  en el cual el valor dentro de los parentesis determina cuanto va a crecer o decrecer mi caja.
+  Si le paso un valor 1 se mantiene como esta
+  Si le paso un valor 1.1 va a crecer un 10% de su valor original
+  Si le paso un valor 0.9 va a decrecer y quedarse con el 90% de su valor original*/
+  transform: scale(1.1);
+}
+
+#cajas .caja1 {
+  background-color: blueviolet;
+  margin: 20px;
+  overflow-y: scroll;
+}
+
+#cajas .caja2 {
+  background-color: red;
+  padding: 20px;
+  transition: transform 2s;
+}
+
+#cajas .caja2:hover {
+  transform: scale(0.8);
+}
+
+#cajas .caja3 {
+  background-color: yellow;
+  position: relative;
+  left: 150px;
+}
+
+#cajas .caja4 {
+  background-color: darkseagreen;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  overflow-y: scroll;
+}
+
+#cajaFija {
+  width: fit-content;
+  background-color: red;
+  position: fixed;
+  top: 70%;
+  left: 30px;
+}
+
+#cajaFija span {
+  /* Coloco un display: block porque por defecto un "span" tiene un display: inline, y al tener ese display no puedo manipular 
+  propiedades como el ancho, el alto, el borde*/
+  display: block;
+  color: white;
+  padding: 10px 20px;
+}
+
+.parrafo {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  transition: all 300ms;
+}
+
+.parrafo:hover {
+  /* Dentro de transform, una de los valores que se puede indicarle es "translateX(20px)" por ejemplo
+  en el cual los px determinan el traslado en el EJE X que realiza en este caso este parrafo que tiene
+  la clase ===> class="parrafo" (ver index.html) */
+  transform: translateX(20px);
+  color: red;
+}

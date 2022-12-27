@@ -1,0 +1,102 @@
+* {
+  font-family: sans-serif, Arial, Helvetica;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../imagenes/paisaje.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#titulo {
+  text-align: center;
+  background-color: #ccc;
+  text-shadow: 2px 2px 3px white;
+}
+
+#subTitulo {
+  text-decoration: underline;
+  color: white;
+  background-color: cornflowerblue;
+  box-shadow: 0px 0px 5px white;
+  width: fit-content;
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+#cajas {
+  /* Coloco este position:relative para combinarlo con el ejemplo de CAJA4*/
+  position: relative;
+  margin-top: 30px;
+  border: 3px solid black;
+}
+
+#cajas .caja {
+  /* Con display: inline-block puedo tener las caracteristicas del display: inline, es decir que se coloquen una al lado de otra,
+  PERO en este caso podre manipular el ancho, alto, margin y paddings, cosa que no se podia hacer con un display: inline */
+  display: inline-block;
+
+  width: 250px;
+  height: 250px;
+  background-color: darkcyan;
+  text-align: center;
+  overflow: hidden;
+}
+
+#cajas .caja1 {
+  background-color: blueviolet;
+  margin: 20px;
+  overflow-y: scroll;
+}
+
+#cajas .caja2 {
+  background-color: red;
+  padding: 20px;
+}
+
+#cajas .caja3 {
+  background-color: yellow;
+  position: relative;
+  left: 150px;
+}
+
+#cajas .caja4 {
+  background-color: darkseagreen;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  overflow-y: scroll;
+}
+
+#cajaFija {
+  width: fit-content;
+  background-color: red;
+  position: fixed;
+  top: 70%;
+  left: 30px;
+}
+
+#cajaFija span {
+  /* Coloco un display: block porque por defecto un "span" tiene un display: inline, y al tener ese display no puedo manipular 
+  propiedades como el ancho, el alto, el borde*/
+  display: block;
+  color: white;
+  padding: 10px 20px;
+}
+
+.parrafo {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+}

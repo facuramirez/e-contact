@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS (estilos)</title>
+    <link rel="stylesheet" href="./01-estilos.css" />
+
+    <!-- NO RECOMENDADO (se debe separar los estilos del html) -->
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="titulo" style="padding: 12px">Bienvenidos a la clase de css</h1>
+
+    <h3 id="subTitulo">Incorporación de estilos</h3>
+
+    <p>La incorporación de estilos se puede dar de 3 formas:</p>
+
+    <ul id="lista">
+      <li>
+        Etiqueta "style" colocada dentro del "head" en el archivo .html (No
+        recomendado)
+      </li>
+      <li>
+        Estilos en linea (in-line styles) colocando el atributo "style" en la
+        etiqueta HTML
+      </li>
+      <li>
+        Creando un archivo ".css" y linkearlo a nuestro archivo .html mediante
+        la etiqueta "link" (RECOMENDADO)
+      </li>
+    </ul>
+  </body>
+</html>
