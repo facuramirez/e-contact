@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*? REGLAS PARA EL TITULO */
+#titulo {
+  background-color: #ccc;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/*? REGLAS PARA LA CAJA PADRE */
+#contenedor {
+  /** Indico que esta caja padre va a funcionar con las caracteristicas de flexbox (para manipular los primeros hijos) */
+  display: flex;
+
+  /** Establezco que los hijos se coloquen de manera horizontal en forma de fila */
+  flex-direction: row;
+
+  /** Establezco que, cuando ya no entren mas cajas en la primer fila, se vayan colocando en la fila siguiente (es decir, en una nueva fila) y asi no se salen del contenedor padre
+  /** (probar tambien el valor "nowrap" en vez de "wrap" */
+  flex-wrap: wrap;
+
+  /** Distribucion de elementos en el eje X (probar tambien con "center", "space-around", "space-between" */
+  justify-content: space-evenly;
+
+  /** Coloco un ancho y dejo centrada esta caja padre */
+  width: 80%;
+  margin: 0 auto;
+
+  /** Coloco un margin-top, un padding y un borde a esta caja padre */
+  margin-top: 50px;
+  padding: 10px;
+  border: 3px solid purple;
+
+  /** Coloco un "gap", es decir, una separacion entre cajas */
+  gap: 20px;
+}
+
+/*? REGLAS PARA LOS PRIMEROS HIJOS */
+#contenedor .seccion {
+  /** Establezco el "ancho" de las cajas con respecto al padre (esta propiedad se le puede aplicar a cada hijo en particular pero en este ejemplo las 4 cajas tendran un 20% */
+  flex-basis: 45%;
+
+  /** Coloco un borde, padding y centro el texto de cada caja */
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+/*? REGLAS PARTICULARES PARA CADA CAJA */
+#contenedor .seccion1 {
+  background-color: red;
+}
+
+#contenedor .seccion2 {
+  /** Cargo la imagen */
+  background-image: url("../imagenes/paisaje.jpg");
+
+  /** La dejo fija en el centro de esta caja */
+  background-position: center;
+
+  /** Evito que se repita la imagen (en caso de ser chica la imagen se va a repetir porque por defecto esta propiedad "background-repeat" se encuentra en "repeat" */
+  background-repeat: no-repeat;
+
+  /** Con el valor "cover" le digo que escale la imagen al mayor tamaño posible sin estirarla ni deformarla.
+  /** Si las proporciones de la imagen difieren de las de la caja, la imagen será recortada vertical u horizontalmente para que no quede un espacio vacío */
+  background-size: cover;
+
+  /** Coloco un alto mínimo de esta caja */
+  min-height: 200px;
+}
+
+/*? Observar que en un maximo de 750px coloco algunas propiedades que NO SON PISADAS con un media-querie MENOR, en este caso de 500px */
+/*? Hay otras propiedades que SI SON PISADAS como por ejemplo el "flex-basis" de la clase "seccion", entre otros */
+
+@media (max-width: 850px) {
+  #contenedor {
+    flex-direction: column;
+  }
+
+  #contenedor .seccion {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
