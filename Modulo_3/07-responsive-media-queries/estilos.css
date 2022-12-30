@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#contenedor {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+#contenedor h3 {
+  text-align: center;
+  padding: 5px;
+}
+
+#seccion {
+  width: 60%;
+  border: 1px solid blue;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#seccion span {
+  border: 1px solid red;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  #contenedor {
+    width: 80%;
+  }
+
+  #contenedor h3 {
+    text-decoration: underline;
+    font-size: 25px;
+  }
+
+  #contenedor p {
+    color: red;
+    font-weight: bolder;
+  }
+
+  #seccion {
+    background-color: yellowgreen;
+  }
+
+  #seccion span {
+    display: block;
+  }
+}
